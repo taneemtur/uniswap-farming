@@ -1,3 +1,7 @@
+// SPDX-License-Identifier: Unlicensed
+
+pragma solidity ^0.6.12;
+
 library Address {
 
     function isContract(address account) internal view returns (bool) {

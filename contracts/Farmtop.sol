@@ -18,6 +18,7 @@ pragma solidity ^0.6.12;
 import './SafeMath.sol';
 import './Ownable.sol';
 import './Address.sol';
+import './Context.sol';
 
 interface IERC20 {
 
@@ -31,19 +32,6 @@ interface IERC20 {
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 }
-
-abstract contract Context {
-    function _msgSender() internal view virtual returns (address payable) {
-        return msg.sender;
-    }
-
-    function _msgData() internal view virtual returns (bytes memory) {
-        this; // silence state mutability warning without generating bytecode - see https://github.com/ethereum/solidity/issues/2691
-        return msg.data;
-    }
-}
-
-
 
 // pragma solidity >=0.5.0;
 

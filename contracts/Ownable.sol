@@ -1,10 +1,16 @@
+// SPDX-License-Identifier: Unlicensed
+
+pragma solidity ^0.6.12;
+
+import './Context.sol';
+
 contract Ownable is Context {
     address private _owner;
     address private _previousOwner;
     uint256 private _lockTime;
 
     event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
-    
+
     constructor () internal {
         address msgSender = _msgSender();
         _owner = msgSender;
